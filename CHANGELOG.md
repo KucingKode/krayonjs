@@ -1,4 +1,4 @@
-# kanvasjs
+# krayonjs
 
 ## 1.0.0
 

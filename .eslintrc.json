@@ -5,7 +5,7 @@
   "extends": ["eslint:recommended", "plugin:import/recommended"],
   "rules": {
     "yoda": "off",
-    "semi": ["error", "always"],
+    "semi": "off",
     "quotes": ["error", "single"],
     "eol-last": ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
@@ -78,7 +78,7 @@
       },
       "rules": {
         "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/semi": ["error", "always"],
+        "@typescript-eslint/semi": "off",
         "@typescript-eslint/quotes": ["error", "single"],
         "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
         "@typescript-eslint/object-curly-spacing": ["error", "always"],
@@ -90,19 +90,7 @@
             "ignoredNodes": ["TemplateLiteral *"]
           }
         ],
-        "@typescript-eslint/member-delimiter-style": [
-          "error",
-          {
-            "multiline": {
-              "delimiter": "semi",
-              "requireLast": true
-            },
-            "singleline": {
-              "delimiter": "semi",
-              "requireLast": false
-            }
-          }
-        ],
+        "@typescript-eslint/member-delimiter-style": "off",
         "@typescript-eslint/space-before-function-paren": [
           "error",
           {

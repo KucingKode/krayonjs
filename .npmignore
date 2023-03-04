@@ -244,5 +244,9 @@ Temporary Items
 
 ### Output
 .build/
-dist/
+src/
 test/
+
+CHANGELOG.md
+*config.*
+.*

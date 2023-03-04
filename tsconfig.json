@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ES6",
     "isolatedModules": false,
     "strict": true,
     "pretty": true,
@@ -20,9 +19,10 @@
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "outDir": "dist"
   },
   "files": ["babel.config.js"],
-  "include": ["packages"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }
