@@ -1,14 +1,14 @@
 {
   "name": "krayonjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript Canvas API made easy",
   "author": {
     "email": "fazlecode@gmail.com",
-    "name": "Fazle A. Utomo"
+    "name": "Fazle Adyuta U."
   },
   "license": "MIT",
-  "main": "dist/krayonjs.cjs.js",
-  "module": "dist/krayonjs.esm.js",
+  "main": "dist/krayon.cjs.js",
+  "module": "dist/krayon.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "simple-git-hooks",
