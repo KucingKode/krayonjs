@@ -38,13 +38,19 @@ export class Krayon extends RawKrayon {
   bg(style: style) { 
     const fillStyle = this.ctx.fillStyle
     this.ctx.fillStyle = style
-    this.ctx.fillRect(0, 0, this.width, this.height)
+
+    this.COORDINATE_ORIGIN === 'center'
+      ? this.ctx.fillRect(-this.width / 2, -this.height / 2, this.width, this.height)
+      : this.ctx.fillRect(0, 0, this.width, this.height)
+
     this.ctx.fillStyle = fillStyle
     return this
   }
 
   clear() {
-    this.clearRect(0, 0, this.width, this.height)
+    this.COORDINATE_ORIGIN === 'center'
+      ? this.ctx.clearRect(-this.width / 2, -this.height / 2, this.width, this.height)
+      : this.ctx.clearRect(0, 0, this.width, this.height)
     return this
   }
 
@@ -286,6 +292,16 @@ export class Krayon extends RawKrayon {
 
   putImageData(imageData: ImageData, dx: number, dy: number, dirtyX: number, dirtyY: number, dirtyWidth: number, dirtyHeight: number) {
     this.ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
+    return this
+  }
+
+  drawImage(image: CanvasImageSource, dx: number, dy: number): this
+  drawImage(image: CanvasImageSource, dx: number, dy: number, dWidth: number, dHeight: number): this
+  drawImage(image: CanvasImageSource, dx: number, dy: number, dWidth: number, dHeight: number, sx: number, sy: number, sWidth: number, sHeight: number): this
+  drawImage(image: CanvasImageSource, dx: number, dy: number, dWidth?: number, dHeight?: number, sx?: number, sy?: number, sWidth?: number, sHeight?: number) {
+    typeof sx === 'number'
+      ? this.ctx.drawImage(image, sx, sy!, sWidth!, sHeight!, dx, dy, dWidth!, dHeight!)
+      : this.ctx.drawImage(image, dx, dy, dWidth!, dHeight!)
     return this
   }
 

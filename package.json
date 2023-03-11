@@ -1,11 +1,27 @@
 {
   "name": "krayonjs",
   "version": "1.0.1",
-  "description": "Javascript Canvas API made easy",
+  "description": "Make javascript Canvas API simpler and easier for drawing 2D graphics",
   "author": {
     "email": "fazlecode@gmail.com",
     "name": "Fazle Adyuta U."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KucingKode/krayonjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KucingKode/krayonjs/issues"
+  },
+  "keywords": [
+    "canvas",
+    "graphic",
+    "graphics",
+    "drawing",
+    "CanvasRenderingContext2D",
+    "frontend",
+    "2d"
+  ],
   "license": "MIT",
   "main": "dist/krayon.cjs.js",
   "module": "dist/krayon.esm.js",
@@ -26,8 +42,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint . --fix",
-      "git add"
+      "eslint . --fix"
     ]
   },
   "dependencies": {
